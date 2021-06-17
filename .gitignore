@@ -189,8 +189,6 @@ install_manifest.txt
 *.jpeg
 *.mp4
 *.mov
-
-
 #pytorch files
 *.pt
 
