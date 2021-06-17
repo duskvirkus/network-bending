@@ -12,7 +12,6 @@ torch.ops.load_library("transforms/dilate/build/libdilate.so")
 torch.ops.load_library("transforms/scale/build/libscale.so")
 torch.ops.load_library("transforms/rotate/build/librotate.so")
 torch.ops.load_library("transforms/translate/build/libtranslate.so")
-torch.ops.load_library("transforms/visualize/build/libvisualize.so")
 
 class Erode(nn.Module):
     def __init__(self):
