@@ -74,11 +74,11 @@ if __name__ == '__main__':
             mean_latent = g_ema.mean_latent(args.truncation_mean)
     else:
         mean_latent = None
-    
-    layer_channel_dims = create_layer_channel_dim_dict(args.channel_multiplier)
-    transform_dict_list = create_transforms_dict_list(yaml_config, layer_channel_dims)
+        
+    layer_channel_dims = create_layer_channel_dim_dict(args.channel_multiplier, 16)
+    transform_dict_list = create_transforms_dict_list(yaml_config, None, layer_channel_dims)
     generate(args, g_ema, device, mean_latent, transform_dict_list)
-    
+
     config_out = {}
     config_out['transforms'] = yaml_config['transforms']
     with open(r'sample/config.yaml', 'w') as file:
