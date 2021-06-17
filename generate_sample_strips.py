@@ -45,7 +45,6 @@ def generate_strips(args, g_ema, device, mean_latent, layer_channel_dims, config
             image = torch.cat(images)
             utils.save_image(
                 image,
-                f'{args.dir}/{str(i).zfill(6)}.jpg',
                 nrow=1,
                 normalize=True,
                 range=(-1, 1),
